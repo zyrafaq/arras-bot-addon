@@ -1,4 +1,11 @@
-# arras-bot-addon
+# Arras Bot Addon
 
-# installation
-just run npm install eris
+## Installation
+
+To install the required dependencies, you can use one of the following methods:
+
+### Using npm
+
+Run the following command:
+```bash
+npm install eris
