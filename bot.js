@@ -15,9 +15,7 @@ const CONFIG = {
     logsChannelId: "1204484183813005323", // The ID of the logs channel
     gameImageLink: "https://zyrafaq.com/assets/round.png", // Link to your game image.
     chatChannelId: "1208734555784351754", // The ID of in-game to Discord channel
-    botChannelId: "1204503267405471744", // The ID of the channel with the bot mention Easter egg
     devRoleId: "1204504807763738706", // The developer role ID
-    enableBotPingEasterEgg: false, // Whether to enable the bot ping Easter egg
     mainServerId: "872757476829831178" // The ID of your server
 };
 
@@ -205,33 +203,6 @@ bot.on("messageCreate", (msg) => {
         } else {
             sockets.broadcast(`${msg.author.username} says on Discord: ${message}`);
         }
-    }
-    if (msg.channel.id === CONFIG.botChannelId && msg.content.startsWith(bot.user.mention) && CONFIG.enableBotPingEasterEgg) {
-        let phrases = ["I've been pinged again.",
-            "Why the frequent pings?",
-            "Another ping. Seriously, why are you bothering me?",
-            "Received your ping. What's the deal? Can we end this constant interruption?",
-            "What's with the repeated pings? This is getting annoying.",
-            "You just pinged me. Why? This has to stop. No more pings.",
-            "Yet another ping. What's the reason? Consider this a request to stop.",
-            "Why am I being pinged again? Enough is enough. Please refrain from further pings.",
-            "Once again, a ping. What's going on? Stop it.",
-            "Another ping from you. What's the purpose? Let's put an end to this, okay ?",
-            "<:peepoPing:1193981184288510024>",
-            "Ping me again and see what happens. Go ahead.",
-            "Can you stop with the pings ?",
-            "Seriously ? Don't you have other things to do ?",
-            "Don't you have other things to do ?",
-            "Alright, here is your reward for pinging for a total of 69 times: ||[Bot Pinger Token](<https://www.youtube.com/watch?v=iik25wqIuFo>)||",
-            "Go touch grass or watch some youtube, idk but enough with the mentions!",
-            "You think this is funny to constantly ping me, huh?",
-            "Okay i will make it clear:\nStop\nPinging\nME!\nOkay? Thanks",
-            "look, i do a barrel roll !\n`._.   :|    .-.    |:    ._.`\n\nCool right? Now STOP PINGING ME !",
-        ];
-        bot.createMessage(msg.channel.id, {
-            content: phrases[Math.floor(Math.random() * phrases.length)],
-            messageReference: { messageID: msg.id },
-        });
     }
 });
 
