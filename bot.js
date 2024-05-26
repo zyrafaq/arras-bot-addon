@@ -1,3 +1,4 @@
+// YOU NEED TO INSTALL A NPM PACKAGE TO USE THIS ADDON!!!
 // Installation:
 // 1. run npm install eris
 // 2. Get your discord bot: https://www.ionos.com/digitalguide/server/know-how/creating-discord-bot/
@@ -12,7 +13,7 @@
 const CONFIG = {
     themeColor: 0xFFFFFF, // Theme color HEX selector: https://www.w3schools.com/colors/colors_picker.asp
     logsChannelId: "1204484183813005323", // The ID of the logs channel
-    gameImageLink: "https://cdn.glitch.global/762b4f6d-cce4-4746-859d-6009760442a2/round.png?v=1707736946335gg", // Link to your game image. I recommend using glitch for hosting
+    gameImageLink: "https://zyrafaq.com/assets/round.png", // Link to your game image.
     chatChannelId: "1208734555784351754", // The ID of in-game to Discord channel
     botChannelId: "1204503267405471744", // The ID of the channel with the bot mention Easter egg
     devRoleId: "1204504807763738706", // The developer role ID
@@ -340,6 +341,7 @@ bot.on("interactionCreate", (interaction) => {
 
 
 bot.on("error", (err) => {
+    bot.disconnect();
     console.error(err);
 });
 
