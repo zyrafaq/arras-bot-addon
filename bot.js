@@ -1,5 +1,9 @@
 // Installation:
-// just run npm install eris
+// 1. run npm install eris
+// 2. Get your discord bot: https://www.ionos.com/digitalguide/server/know-how/creating-discord-bot/
+// 3. Put your bot token as BOT_TOKEN in .env DON'T SHARE YOUR BOT TOKEN!!!
+// 4. Add your bot to your server Guide:
+
 // Eris docs: https://abal.moe/Eris/docs/0.17.2/getting-started
 
 // Config
