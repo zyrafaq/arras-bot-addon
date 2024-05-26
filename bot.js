@@ -322,7 +322,7 @@ module.exports = ({ Events }) => {
         let playerName = socket.player.body.name
             ? socket.player.body.name
             : "Unnamed";
-        bot.createMessage(chatChannel, {
+        bot.createMessage(CONFIG.chatChannelId, {
             embed: {
                 color: themeColor,
                 fields: [
@@ -335,7 +335,7 @@ module.exports = ({ Events }) => {
         });
     });
     Events.on("playerJoin", ({ name }) => {
-        bot.createMessage(chatChannel, {
+        bot.createMessage(CONFIG.chatChannelId, {
             embed: {
                 color: 65280,
                 fields: [
@@ -351,7 +351,7 @@ module.exports = ({ Events }) => {
 
     Events.on("playerLeave", ({ name }) => {
         if (name === "") name = "An unnamed player";
-        bot.createMessage(chatChannel, {
+        bot.createMessage(CONFIG.chatChannelId, {
             embed: {
                 color: 16711680,
                 fields: [
